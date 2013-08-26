@@ -1,0 +1,10 @@
+<div class="row">
+	<div class="large-8 large-centered columns">
+		<h2>Výpisy z obchodního rejstříku</h2>
+		<%= form_tag companies_path, :method => 'get' do %>
+			<%= label_tag :ico, "Zadejte IČO" %>
+			<%= text_field_tag :ico, params[:ico] %>
+			<%= submit_tag "Hledat", :class=> "button success" %>
+		<% end %>
+	</div>
+</div>
