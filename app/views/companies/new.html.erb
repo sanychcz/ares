@@ -1,20 +1,20 @@
 <% provide :title, "Nové hledání" %>
 
 <div class="row-above">
-	<div class="row">
-		<div class="large-10 large-centered columns">
-			<div class="row collapse">
-				<h2>Výpisy z obchodního rejstříku</h2>
-				<div class="small-9 columns">			
-					<%= form_for CompanySearch.new(), url: companies_path, :method => 'get', :validate => true do |f| %>
-					<%= render 'errors', object: f.object %>
-					<%= f.text_field :ico, :placeholder => "Zadejte IČO, format: 12345678" %>
-				</div>
-				<div class="small-3 columns">
-					<%= f.submit "Hledat", :class=> "button prefix success" %>
-				</div>
-				<% end %>
-			</div>
-		</div>
-	</div>
+  <div class="row">
+    <div class="large-10 large-centered columns">
+      <div class="row collapse">
+        <h2>Výpisy z obchodního rejstříku</h2>
+        <div class="small-9 columns">			
+          <%= form_for CompanySearch.new(), url: companies_path, :method => 'get', :validate => true do |f| %>
+          <%= render 'errors', object: f.object %>
+          <%= f.text_field :ico, :placeholder => "Zadejte IČO, format: 12345678" %>
+        </div>
+        <div class="small-3 columns">
+          <%= f.submit "Hledat", :class=> "button prefix success" %>
+        </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
 </div>
