@@ -7,6 +7,7 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 gem "nokogiri", "~> 1.6.0"
+gem 'client_side_validations'
 
 group :test, :development do
 	gem 'sqlite3'

@@ -1,18 +1,24 @@
 <div class="row">
-	<div class="large-10 large-centered columns">
+	<div class="row">
 		<h2>Výsledek hledání</h2>
-		<h3><%= @status_main %></h3>
-		<h3>Status: <%= @company_status %></h3> 
-		<h3>IČ: <%= @company_ico %></h3>
-		<h3>Datum založení: <%= @company_datum %></h3>
-		<h3>Název: <%= @company_name %></h3>
-		<h3>Pravní forma: <%= @company_type %></h3>
-		<h3>Předmět podnikání:</h3>
-		<ul id="seznam">	
-			<% @company_business.each do |cb| %>
-			<li><%= cb.text %></li>	
-		<% end %>
-		</ul>
-		<h1><%= link_to 'nové hledání', new_company_path  %></h1>
+	</div>
+	<div class="row">
+		<div class="large-9 columns">	
+			<h3 class="subheader"><%= @status_main %></h3>
+			<h3><small>Status: </small><%= @company_status %></h3> 
+			<h3><small>Název: </small><%= @company_name %></h3>
+			<h3><small>IČ: </small><%= @company_ico %></h3>
+			<h3><small>Datum založení: </small><%= @company_datum %></h3>
+			<h3><small>Pravní forma: </small><%= @company_type %></h3>
+			<h3><small>Předmět podnikání: </small></h3>
+			<ul id="seznam">	
+				<% @company_business.each do |cb| %>
+				<li><%= cb.text %></li>	
+			<% end %>
+			</ul>
+		</div>
+		<div class="large-3 columns">
+			<%= link_to 'nové hledání', new_company_path, :class => "button" %>
+		</div>
 	</div>
 </div>

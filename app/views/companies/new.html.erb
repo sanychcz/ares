@@ -1,10 +1,19 @@
-<div class="row">
-	<div class="large-8 large-centered columns">
-		<h2>Výpisy z obchodního rejstříku</h2>
-		<%= form_tag companies_path, :method => 'get' do %>
-			<%= label_tag :ico, "Zadejte IČO" %>
-			<%= text_field_tag :ico, params[:ico] %>
-			<%= submit_tag "Hledat", :class=> "button success" %>
-		<% end %>
+<div class="row-above">
+	<div class="row">
+		<div class="large-10 large-centered columns">
+			<div class="row collapse">
+				<h2>Výpisy z obchodního rejstříku</h2>
+					<div class="small-9 columns">			
+						<%= form_for CompanySearch.new(), url: companies_path, :method => 'get', :validate => true do |f| %>
+						<%= render 'errors', object: f.object %>
+
+						<%= f.text_field :ico, :placeholder => "Zadejte IČO, format: 12345678" %>
+					</div>
+					<div class="small-3 columns">		
+						<%= f.submit "Hledat", :class=> "button prefix success" %>		
+					</div>			
+					<% end %>				
+			</div>	
+		</div>
 	</div>
 </div>
