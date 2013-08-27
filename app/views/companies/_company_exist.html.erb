@@ -13,10 +13,10 @@
 			<h3><small>Datum založení: </small><%= @company_datum %></h3>
 			<h3><small>Pravní forma: </small><%= @company_type %></h3>
 			<h3><small>Předmět podnikání: </small></h3>
-			<ul id="seznam">	
+			<ul id="seznam">
 				<% @company_business.each do |cb| %>
-				<li><%= cb.text %></li>	
-			<% end %>
+				  <li><%= cb.text %></li>	
+				<% end %>
 			</ul>
 		</div>
 		<div class="large-3 columns">
