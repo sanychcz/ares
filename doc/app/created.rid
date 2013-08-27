@@ -1,0 +1,7 @@
+Tue, 27 Aug 2013 13:01:24 +0200
+doc/README_FOR_APP	Mon, 26 Aug 2013 16:00:13 +0200
+app/controllers/application_controller.rb	Mon, 26 Aug 2013 16:00:13 +0200
+app/controllers/companies_controller.rb	Tue, 27 Aug 2013 12:55:55 +0200
+app/helpers/application_helper.rb	Tue, 27 Aug 2013 12:27:08 +0200
+app/helpers/companies_helper.rb	Mon, 26 Aug 2013 16:02:05 +0200
+app/models/company_search.rb	Tue, 27 Aug 2013 12:05:23 +0200
